@@ -1,0 +1,79 @@
+% add all extra packages you need to load to this file  
+%\usepackage{tabularx} 
+\usepackage{forest}
+\forestset{
+  nice nodes/.style={
+    for tree={
+      inner sep=0.75pt, s sep=10pt, 
+      fit=band,
+    },
+  },
+  default preamble=nice nodes,
+}
+
+\forestset{
+fairly nice empty nodes/.style={
+            delay={where content={}{shape=coordinate,for parent={
+                  for children={anchor=north}}}{}}
+, angled/.style={content/.expanded={$<$\forestov{content}$>$}}
+}}
+
+
+
+\useforestlibrary{linguistics}
+\forestapplylibrarydefaults{linguistics}
+\usepackage{tipa}
+
+
+%\usepackage{tikz}
+%\usepackage{tikz-qtree}
+
+%\usepackage[normalem]{ulem}
+  %\renewcommand{\ULthickness}{1.1pt} %thick line, remove for a thin line
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%           Examples                           %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% to add additional information to the right of examples, uncomment the following line
+%\usepackage{jambox}
+%% if you want the source line of examples to be in italics, uncomment the following line
+% \renewcommand{\exfont}{\itshape}
+\usepackage{./langsci/styles/langsci-optional}
+%\usepackage{./langsci/styles/langsci-gb4e}  %disable this if \linguex is activated and vice versa
+\usepackage{./langsci/styles/langsci-lgr}
+\usepackage{./langsci/styles/langsci-glyphs}
+
+%\usepackage[english]{babel}
+\usepackage{tikz}
+\usetikzlibrary{matrix,calc}
+\newcommand\tikzmark[1]{\tikz[remember picture, baseline=(#1.base)] \node[anchor=base,inner sep=0pt, outer sep=0pt] (#1) {#1};}
+
+\tikzset{
+    ncbar angle/.initial=90,
+    ncbar/.style={
+        to path=(\tikztostart)
+        -- ($(\tikztostart)!#1!\pgfkeysvalueof{/tikz/ncbar angle}:(\tikztotarget)$)
+        -- ($(\tikztotarget)!($(\tikztostart)!#1!\pgfkeysvalueof{/tikz/ncbar angle}:(\tikztotarget)$)!\pgfkeysvalueof{/tikz/ncbar angle}:(\tikztostart)$)
+        -- (\tikztotarget)
+    },
+    ncbar/.default=0.5cm,
+}
+
+\usepackage{linguex}
+
+\newcommand{\arrow}[2]{\begin{tikzpicture}[remember picture,overlay]
+\draw[->,shorten >=3pt,shorten <=3pt] (#1.base) to [ncbar=\arrowht] (#2.base);
+\end{tikzpicture}
+\setlength{\arrowht}{0ex}
+}
+
+\usepackage{multicol}
+\usepackage{xcolor,soul}
+\sethlcolor{lightgray}
+
+ 
+% \usepackage[hang,flushmargin]{footmisc}
+% \setlength\footnotemargin{10pt}
+
+ 
