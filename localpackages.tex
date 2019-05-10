@@ -22,14 +22,7 @@ fairly nice empty nodes/.style={
 
 \useforestlibrary{linguistics}
 \forestapplylibrarydefaults{linguistics}
-% \usepackage{tipa}
 
-
-%\usepackage{tikz}
-%\usepackage{tikz-qtree}
-
-%\usepackage[normalem]{ulem}
-  %\renewcommand{\ULthickness}{1.1pt} %thick line, remove for a thin line
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                              %%%
 %%%           Examples                           %%%
@@ -44,8 +37,7 @@ fairly nice empty nodes/.style={
 \usepackage{./langsci/styles/langsci-lgr}
 \usepackage{./langsci/styles/langsci-glyphs}
 
-%\usepackage[english]{babel}
-\usepackage{tikz}
+
 \usetikzlibrary{matrix,calc}
 \newcommand\tikzmark[1]{\tikz[remember picture, baseline=(#1.base)] \node[anchor=base,inner sep=0pt, outer sep=0pt] (#1) {#1};}
 
@@ -60,20 +52,16 @@ fairly nice empty nodes/.style={
     ncbar/.default=0.5cm,
 }
 
-
-\newcommand{\arrow}[2]{\begin{tikzpicture}[remember picture,overlay]
-\draw[->,shorten >=3pt,shorten <=3pt] (#1.base) to [ncbar=\arrowht] (#2.base);
-\end{tikzpicture}
-\setlength{\arrowht}{0ex}
-}
-
 \usepackage{multicol}
 \usepackage{xcolor,soul}
 \sethlcolor{lightgray}
 
 \usepackage{linguex}
-%\renewcommand{\theExLBr}{} activate for no () in \ref
-%\renewcommand{\theExRBr}{} activate for no () in \ref
+\newif\ifparens\parensfalse
+\renewcommand{\theExNo}{\protect\theExLBr\arabic{ExNo}\protect\theExRBr}
+\renewcommand\theExLBr{\ifparens\else(\fi}
+\renewcommand\theExRBr{\ifparens\else)\fi}
+\newcommand\pref[1]{{\parenstrue\ref{#1}}}
  
 % \usepackage[hang,flushmargin]{footmisc}
 % \setlength\footnotemargin{10pt}

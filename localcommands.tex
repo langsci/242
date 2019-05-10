@@ -19,3 +19,9 @@
 \newcommand{\gloss}[1]{#1}
 
 \renewcommand{\firstrefdash}{}% Linguex setting: No dash in links between example an subexample.
+
+\newcommand{\arrow}[2]{\begin{tikzpicture}[remember picture,overlay]
+	\draw[->,shorten >=3pt,shorten <=3pt] (#1.base) to [ncbar=\arrowht] (#2.base);
+	\end{tikzpicture}
+	\setlength{\arrowht}{0ex}
+}
