@@ -1,6 +1,8 @@
 % add all extra packages you need to load to this file  
 %\usepackage{tabularx} 
 \usepackage{forest}
+\useforestlibrary{linguistics}
+\forestapplylibrarydefaults{linguistics}
 \forestset{
   nice nodes/.style={
     for tree={
@@ -18,10 +20,13 @@ fairly nice empty nodes/.style={
 , angled/.style={content/.expanded={$<$\forestov{content}$>$}}
 }}
 
+\forestset{
+nice empty nodes/.style={
+    for tree={calign=fixed edge angles},
+    delay={where content={}{shape=coordinate,for siblings={anchor=north}}{}}
+},
+}
 
-
-\useforestlibrary{linguistics}
-\forestapplylibrarydefaults{linguistics}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                              %%%

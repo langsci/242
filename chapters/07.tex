@@ -961,7 +961,7 @@ This begs the following question: how are the horizontal Dem, Wh, Rel, and Comp 
 
  The familiar sequences in \ref{ver} and \ref{hor} form the vertical and the horizontal paradigm; their combination in \ref{combine} incorporates both \isi{paradigm}s into one complex morphological system.
  \par
- All we need to do to derive case-marked forms of Dem, Wh, Rel, and Comp (if applicable) is to accommodate the basic premise that the fseqs in \ref{ver} and \ref{hor} can appear as subsets.\footnote{Different classes of ordered features (fseqs) that form a singleton projection line are informally referred to as ``\isi{fseq} zones'' in \citeauthor{LTN} (\citeyear{LTN,NU}). \is{fseq zone}
+ All we need to do to derive case-marked forms of Dem, Wh, Rel, and Comp (if applicable) is to accommodate the basic premise that the fseqs in \ref{ver} and \ref{hor} can appear as subsets.\footnote{Different classes of ordered features (fseqs) that form a singleton projection line are informally referred to as ``\isi{fseq} zones'' in \citet{LTN,NU}. \is{fseq zone}
 } %end of fn
 For instance, the Dem\textsubscript{indef} subset of \ref{hor} can be directly extended by K$_{1}$, K$_{2}$, etc. when \isi{feature}s forming Wh, Rel, Comp are not selected as in the formation of case-inflected demonstratives. However, when these features are selected, they must be strictly ordered with respect to the other features within  the same fseq (on top of Dem\textsubscript{indef}) and with respect to the case fseq (below K$_{1}$).
 \par
@@ -974,10 +974,10 @@ sequence of syntactic heads, a de facto one-dimensional space, leads to the conj
 \ex.\label{3D}
 
 \begin{center}\vspace{-15pt}
-\begin{tikzpicture}[every node/.style={anchor=north east,fill=white,minimum width=0.1cm,minimum height=2mm}]
-\matrix (mA) [draw,matrix of math nodes]
+\begin{tikzpicture}[every node/.style={anchor=base west,fill=white,minimum width=0.1cm,minimum height=2mm}]
+\matrix (mA) [draw,matrix of math nodes,matrix anchor=north east]
 {
-& \textsc{{\color{white}comp}} & \textsc{{\color{white}rel}} & \textsc{\textbf{where}} & \textsc{{\color{white}dem}} \\\hline
+& \textsc{{\color{white}comp}} & \textsc{{\color{white}rel}} &[2mm] \textsc{\textbf{where}} & \textsc{{\color{white}dem}} \\\hline
 \textsc{{\color{white}stem}}	& {\color{white}0} 	& {\color{white}0} 	& \textup{kur} 	& {\color{white}0}\\\hline
 \textsc{nom} 	&  			& \textup{kas} &  & {\color{white}0}\\\hline
 \textsc{acc} 	& 			& \textup{ko} 	&   & {\color{white}0}\\\hline
@@ -986,9 +986,9 @@ sequence of syntactic heads, a de facto one-dimensional space, leads to the conj
 \textsc{loc}	&  			&  &  & {\color{white}0} \\
 };
 
-\matrix (mB) [draw,matrix of math nodes] at ($(mA.south west)+(3.25,3.10)$)
+\matrix (mB) [draw,matrix of math nodes,matrix anchor=north east] at ($(mA.south west)+(3.25,3.10)$)
 {
-& \textsc{{\color{white}comp}} & \textsc{{\color{white}rel}} & \textsc{\textbf{who}} & \textsc{{\color{white}dem0}} \\\hline
+& \textsc{{\color{white}comp}} & \textsc{{\color{white}rel}} & [2mm]\textsc{\textbf{who}} & \textsc{{\color{white}dem0}} \\\hline
 			&  	&  	& \textup{\hl{ka-}} 	& {\color{white}0}\\\hline
 \textsc{nom} 	&  			& \textup{kas} & \textup{kas} & {\color{white}0}\\\hline
 \textsc{acc} 	& 			& \textup{ko} 	& \textup{ko}  & {\color{white}0}\\\hline
@@ -997,7 +997,7 @@ sequence of syntactic heads, a de facto one-dimensional space, leads to the conj
 \textsc{loc}	&  			&  &  & {\color{white}00} \\
 };
 
-\matrix (mC) [draw,matrix of math nodes] at ($(mB.south west)+(3.15,3.25)$)
+\matrix (mC) [draw,matrix of math nodes,matrix anchor=north east] at ($(mB.south west)+(3.15,3.25)$)
 {
 & \textsc{comp} & \textsc{rel} 		& \textsc{\textbf{what}} 				& \textsc{dem} \\\hline
 \textsc{stem}	& \textup{\hl{ka}} 	& \textup{\hl{ka-}} 	& \textup{\hl{ka-}} 	& \textup{ta-}\\\hline
@@ -1038,10 +1038,10 @@ Such an ordering also captures the observation we can make on the basis of the d
 \ex.\label{3D:dem}
 
 \begin{center}\vspace{-20pt}
-\begin{tikzpicture}[every node/.style={anchor=north east,fill=white,minimum width=0.1cm,minimum height=2mm}]
-\matrix (mA) [draw,matrix of math nodes]
+\begin{tikzpicture}[every node/.style={anchor=base west,fill=white,minimum width=0.1cm,minimum height=2mm}]
+\matrix (mA) [draw,matrix of math nodes,matrix anchor=north east]
 {
-\textsc{{\color{white}ooo}} & \textsc{{\color{white}ooo}} & \textsc{{\color{white}ooo}} & \textsc{where} & \textsc{{\color{white}ooo}} \\\hline
+\textsc{{\color{white}ooo}} & \textsc{{\color{white}ooo}} & \textsc{{\color{white}ooo}} &[6mm] \textsc{where} & \textsc{{\color{white}ooo}} \\\hline
 {\color{white}ooo}	& {\color{white}ooo} 	& {\color{white}0} 	& \textup{kur} 	& {\color{white}ooo}\\\hline
  	&  			&  &  & {\color{white}0}\\\hline
  	& 			&  	&   & {\color{white}0}\\\hline
@@ -1050,9 +1050,9 @@ Such an ordering also captures the observation we can make on the basis of the d
 	&  			&  &  & {\color{white}0} \\
 };
 
-\matrix (mB) [draw,matrix of math nodes] at ($(mA.south west)+(3.4,3.0)$)
+\matrix (mB) [draw,matrix of math nodes,matrix anchor=north east] at ($(mA.south west)+(3.4,3.0)$)
 {
-& \textsc{{\color{white}comp}} & \textsc{{\color{white}rel}} & \textsc{who} & \textsc{{\color{white}0}} \\\hline
+& \textsc{{\color{white}comp}} & \textsc{{\color{white}rel}} &[4mm] \textsc{who} & \textsc{{\color{white}0}} \\\hline
 {\color{white}ooo}	&  	&  	& \textup{\hl{ka-}} 	& {\color{white}0}\\\hline
 \textsc{nom} 	&  			& \textup{kas} 	& \textup{kas} 		& {\color{white}0}\\\hline
 \textsc{acc} 	& 			& \textup{ko} 	& \textup{ko}  		& {\color{white}0}\\\hline
@@ -1061,9 +1061,9 @@ Such an ordering also captures the observation we can make on the basis of the d
 \textsc{loc}	&  			&  &  & {\color{white}00} \\
 };
 
-\matrix (mC) [draw,matrix of math nodes] at ($(mB.south west)+(3.25,3.2)$)
+\matrix (mC) [draw,matrix of math nodes,matrix anchor=north east] at ($(mB.south west)+(3.25,3.2)$)
 {
-& \textsc{comp} & \textsc{rel} 			& \textsc{what} 	& \textsc{\textbf{med}} \\\hline
+& \textsc{comp} & \textsc{rel} 			&[4mm] \textsc{what} 	& \textsc{\textbf{med}} \\\hline
 	& \textup{\hl{ka}} 	& \textup{\hl{ka-}} 	& \textup{\hl{ka-}} 	& \textup{ta-}\\\hline
 \textsc{n} 	&  					& \textup{kas} 		& \textup{kas} 		& \textup{tas}\\\hline
 \textsc{a} 	& 					& \textup{ko} 		& \textup{ko}  		& \textup{to}\\\hline
@@ -1072,7 +1072,7 @@ Such an ordering also captures the observation we can make on the basis of the d
 \textsc{i}	&  			&  		&  				& \textup{taj}\textup{\={a}} \\
 };
 
-\matrix (dem) [draw,matrix of math nodes] at ($(mC.south west)+(3,2.85)$)
+\matrix (dem) [draw,matrix of math nodes,matrix anchor=north east] at ($(mC.south west)+(3,2.85)$)
 {
 & {\color{white}ooooo} & {\color{white}oooo} & {\color{white}oooo} 				& \textsc{\textbf{prox}} \\\hline
 \textsc{stem}	& {\color{white}oooo} & {\color{white}oooo} & {\color{white}oooo} 	& \textup{\v{s}i-}\\\hline
