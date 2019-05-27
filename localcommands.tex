@@ -28,3 +28,5 @@
 \setlength{\linguexfootnotewidth}{\linewidth-\Exlabelsep}
 
 \newlength{\arrowht}
+
+\pretocmd{\tableofcontents}{\addtocontents{toc}{\protect\enlargethispage{2\baselineskip}}}{}{}
