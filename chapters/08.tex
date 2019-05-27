@@ -209,15 +209,15 @@ In \citeauthor{Kayne1994}'s \citeyearpar{Kayne1994} analysis, the head nouns are
 \strut `that person that ate the food'
 \b.\label{nu1} 
 \begin{forest}nice empty nodes, for tree={l sep=0.6em,l=0,calign angle=63}
-[DP$_{1}$, s sep=-10pt [D$_{1}$ [\textit{\'i}]]
+[DP$_{1}$, s sep=0pt [D$_{1}$ [\textit{\'i}]]
  [RelP, s sep=15pt  [DP$_{2}$, name=tgt , s sep=15pt  
- [NP [\textit{mut}, name=tgt2, roof]][{}, s sep=15pt [Op [\textit{n\'u}, roof]]
+ [NP [\textit{mut}\\`person', name=tgt2, roof]][{}, s sep=15pt [Op [\textit{n\'u}, roof]]
  [{} [D$_{2}$ [$\emptyset$]][\dots, name=t2]]]]
  [{}, s sep=15pt
  [Rel [$\emptyset$]] [TP [\dots, name=t]
- [T' [\textit{a b\'i \textsuperscript{↓}jέ b\'ijέk}, roof]]]]]]
+ [T' [\textit{a b\'i \textsuperscript{↓}jέ b\'ijέk}\\`ate the food', roof]]]]]]
  \draw[dashed,->,>=stealth,overlay] (t2) ..controls +(south:1.75) and +(south:1.75).. (tgt2);
- \draw[dashed,->,>=stealth,overlay] (t) [in=-155,out=-125,looseness=2.85]  to (tgt);
+ \draw[dashed,->,>=stealth,overlay] (t) [in=-155,out=-125,looseness=3.25]  to (tgt);
 \end{forest}
 
 \pagebreak\noindent In the first step of this derivation, the noun phrase \textit{mut} `person' is fronted to a position before the \isi{demonstrative} \textit{n\'u} in its own DP$_{2}$ (described as the ``Op(erator)'' position in \citealt{Jenks-etall}).\footnote{\cite{Jenks-etall} follow \cite{Kayne1994} in labelling the relative clauses simply as CP. RelP is used instead in the diagrams below in order to disambiguate the head of the \isi{relative clause}, Rel, with the head of the clause headed by a \isi{complementizer}, Comp, as these are structurally distinct categories in the strand of research we explore in the present work. This is a technical remark with no consequences for the constituent structure of relative clauses or for the essence of \citeauthor{Jenks-etall}'s \citeyearpar{Jenks-etall} analysis.
@@ -235,9 +235,9 @@ n\'u mut\textsubscript{i} [ \_\textsubscript{i} a b\'i \textsuperscript{↓}jέ 
 \b.\label{nu2} 
 \begin{forest}nice empty nodes, for tree={l sep=0.7em,l=0,calign angle=63}
  [DP$_{1}$, s sep=20pt  [DP$_{2}$, , s sep=10pt, name=Z
- [Dem [\textit{n\'u}, roof]][{}[D$_{2}$, s sep=12pt [$\emptyset$]][NP [\textit{mut}, roof]]]]
+ [Dem [\textit{n\'u}, roof]][{}[D$_{2}$, s sep=12pt [$\emptyset$]][NP [\textit{mut}\\`person', roof]]]]
  [{}, s sep=20pt [D$_{1}$ [$\emptyset$]][RelP, s sep=15pt [\dots, name=tgt ][, s sep=10pt [Rel [$\emptyset$]][TP [\dots, name=t]
- [T' [\textit{a b\'i \textsuperscript{↓}jέ b\'ijέk}, roof]]]]]]]]
+ [T' [\textit{a b\'i \textsuperscript{↓}jέ b\'ijέk}\\`ate the food', roof]]]]]]]]
   \draw[dashed,->,>=stealth,overlay] (t) ..controls +(south west:2) and +(south west:1.5).. (tgt);
    \draw[dashed,->,>=stealth,overlay] (tgt) ..controls +(south west:6) and +(west:3.5).. (Z);
 \end{forest}

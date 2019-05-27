@@ -290,22 +290,22 @@ The merger of the first \isi{feature} of the case \isi{fseq} on top of the NP \i
  [NomP, s sep=10pt [K$_{1}$][NP [\textit{win}\\`wine', roof]
  ]]
  \end{forest} 
- \hskip 1.25cm $\leadsto$
+ \hskip 1cm $\leadsto$ \hskip -0.5cm
 \begin{forest}nice empty nodes, for tree={l sep=0.7em,l=0,calign angle=63}
- [~, s sep=15pt [NP, name=tgt [\textit{win}\\ ,roof]]
+ [~, s sep=15pt [NP, name=tgt [\textit{win}\\`wine', roof]]
  [NomP [K$_{1}$][..., name=t]
 ]{\draw (.east) node[right]{$\Rightarrow$ \textit{o}}; }]
-\draw[dashed,->,>=stealth] (t) ..controls +(south west:2.25) and +(south west:2.25).. (tgt);
+ \draw[dashed,->,>=stealth] (t) [in=-155,out=-120,looseness=2]  to (tgt);
  \end{forest}
 
-\vskip -\baselineskip
+\vskip -2.25\baselineskip
 The constituent created in this way matches the lexical entry in \ref{intro:o} and, on the strength of the \isi{Superset Principle}, gets spelled out as \textit{-o}, which comes out as the suffix on the \isi{root} \textit{win}.
 \par 
 The new cycle begins with the merger of next \isi{feature} in the case \isi{fseq}, the accusative-forming K$_{2}$, as in: 
 
 \ex.\label{intro:K2}
 \begin{forest}nice empty nodes, for tree={l sep=0.7em,l=0,calign angle=63}
- [AccP [K$_{2}$] [NomP, s sep=10pt [NP [\textit{win}\\ ,roof]]
+ [AccP, s sep=0pt [K$_{2}$] [NomP, s sep=10pt [NP [\textit{win}\\`wine',roof]]
  [NomP, s sep=0pt [K$_{1}$]
  ]{\draw (.east) node[right]{$\Rightarrow$ \textit{o}}; }]]
  \end{forest}
@@ -331,7 +331,7 @@ In contrast to \ili{English}, it is clear that neither NomP nor AccP is spelled 
 
 \ex. Spell-out of the \ili{Polish} accusative \textit{win-o} `wine'\label{so:wino}\\[-1ex]
 \begin{forest}nice empty nodes, for tree={l sep=0.75em,l=0,calign angle=63}
- [~, s sep=25pt [NP, name=tgt [\textit{win}\\,roof]][AccP, s sep=-10pt [K$_{2}$] 
+ [~, s sep=20pt [NP, name=tgt [\textit{win}\\`wine',roof]][AccP, s sep=-10pt [K$_{2}$] 
  [NomP,s sep=-10pt [..., name=t][NomP [K$_{1}$]]]
  ]{\draw (.east) node[right]{$\Rightarrow$ \textit{o}}; }]
 \draw[dashed,->,>=stealth] (t) ..controls +(south west:1.5) and +(south west:2).. (tgt);
@@ -347,7 +347,7 @@ Given the lexical entries as in \Next, spec-to-spec movement also facilitates th
 
 \ex. Spell-out of the Balkan \ili{Romani} accusative \textit{\v{c}hav-\'es} `boy'\label{VR:acc}\\[-1ex]
 \begin{forest}nice empty nodes, for tree={l sep=0.75em,l=0,calign angle=63}
-[~, s sep=25pt [NP, name=tgt [\textit{\v{c}hav}\\,roof]]
+[~, s sep=25pt [NP, name=tgt [\textit{\v{c}hav}\\`boy',roof]]
 [AccP, s sep=8 [K$_{2}$][NomP [..., name=t]
 [NomP, s sep=0pt [K$_{1}$]]]
 ]{\draw (.east) node[right]{$\Rightarrow$ \textit{\'es}}; }]
@@ -364,11 +364,11 @@ The merger of the next case feature in the fseq, the genitive-forming K$_{3}$ re
 
 \ex.\label{intro:a} Spell-out of the \ili{Polish} genitive \textit{win-a} `wine'\\[-1ex]
 \begin{forest}nice empty nodes, for tree={l sep=0.75em,l=0,calign angle=63}
-[~, s sep=20pt [NP, name=tgt [\textit{win},roof]]
+[~, s sep=20pt [NP, name=tgt [\textit{win}\\`wine',roof]]
 [GenP [K$_{3}$][AccP [..., name=t] [AccP, s sep=8pt [K$_{2}$]
 [NomP [K$_{1}$]]]]{\draw (.east) node[right]{$\Rightarrow$ \textit{o}}; }]
 {\draw (.east) node[right]{$\Rightarrow$ \textit{a}}; }]
-\draw[dashed,->,>=stealth] (t) ..controls +(south west:1.5) and +(south west:2).. (tgt);
+\draw[dashed,->,>=stealth] (t) ..controls +(south west:1.75) and +(south west:2.5).. (tgt);
  \end{forest}
 
 \noindent In contrast to the \ili{Polish} genitive \textit{-a}, the genitive marker \textit{-koro} in \ili{Romani} does not over-ride the accusative suffix \textit{-\'es} but stacks as the second suffix. This indicates that the syn-sem structure realized by \textit{-koro} includes only K$_{3}$, as in: 
@@ -380,7 +380,7 @@ This means that an attempt to spell this \isi{feature} out by successive-cyclic 
 
 \ex.\label{failed:koro}
 \begin{forest}nice empty nodes, for tree={l sep=0.75em,l=0,calign angle=63}
-[~, s sep=20pt [NP, name=tgt [\textit{\v{c}hav}\\,roof]]
+[~, s sep=20pt [NP, name=tgt [\textit{\v{c}hav}\\`boy',roof]]
 [GenP, s sep=8pt [K$_{3}$][AccP, s sep=8pt [..., name=t] [AccP [K$_{2}$]
 [NomP [K$_{1}$]]]{\draw (.east) node[right]{$\Rightarrow$ \textit{\'es}}; }]
 ]{\draw (.east) node[right]{$\Rightarrow$ no match}; }]
@@ -392,14 +392,14 @@ This means that an attempt to spell this \isi{feature} out by successive-cyclic 
 \ex.\label{so:vrg} Spell-out of the \ili{Romani} genitive \textit{\v{c}hav-\'es-koro} `boy'\\
 \resizebox{\linewidth}{!}{%
 \begin{forest}nice empty nodes, for tree={l sep=0.7em,l=0,calign angle=63}
-[GenP, s sep=8pt [K$_{3}$][AccP, s sep=8pt [NP [\textit{\v{c}hav}\\ ,roof]]
+[GenP, s sep=8pt [K$_{3}$][AccP, s sep=8pt [NP [\textit{\v{c}hav}\\`boy' ,roof]]
 [AccP, s sep=15pt [K$_{2}$]
 [NomP, s sep=0pt [K$_{1}$]]]{\draw (.east) node[right]{$\Rightarrow$ \textit{\'es}}; }
 ]]{\draw (.east) node[right]{$\Rightarrow$ no match}; }
 \end{forest}
 \hskip 0.25cm$\leadsto$ %\hskip -1.75cm
 \begin{forest}nice empty nodes, for tree={l sep=0.7em,l=0,calign angle=63}
-[~, s sep=20pt [AccP, s sep=8pt, name=tgt [NP [\textit{\v{c}hav}\\ ,roof]]
+[~, s sep=20pt [AccP, s sep=8pt, name=tgt [NP [\textit{\v{c}hav}\\`boy' ,roof]]
 [AccP, s sep=10pt [K$_{2}$]
 [NomP [K$_{1}$]]
 ]{\draw (.east) node[right]{$\Rightarrow$ \textit{\'es}}; }
@@ -599,7 +599,7 @@ Next, the merger of F$_{4}$ will take place. The default option for \isi{spell-o
 In this case, the movement of the previously spelled out constituent is attempted: F$_{3}$P \textit{ROOT} moves on top of F$_{4}$P. This movement takes place in line with the \isi{Shortest Move} condition, whereby the evacuated material has to adjoin right above the node where matching takes place. This step is shown in the following: 
 
 \ex. 
- \hskip -1cm \begin{forest}nice empty nodes, for tree={l sep=0.6em,l=0,calign angle=63}
+\begin{forest}nice empty nodes, for tree={l sep=0.6em,l=0,calign angle=63}
 [F$_{4}$P, s sep=45pt [F$_{3}$P, name=tgt [F$_{3}$][ [F$_{2}$][ [F$_{1}$]]]
 ]{\draw (.east) node[right]{$\Rightarrow$ \textit{ROOT}}; } 
 [F$_{4}$P [F$_{4}$][..., name=t]]{\draw (.east) node[right]{$\Rightarrow$ \textit{X}}; }]
@@ -652,7 +652,7 @@ The derivation in \ref{F6} with the added F$_{6}$ is not going to surface as \te
 [F$_{3}$P [F$_{3}$][F$_{2}$P [F$_{2}$][F$_{1}$P [F$_{1}$]]
 ]{\draw (.east) node[right]{$\Rightarrow$ \textit{ROOT}}; }]
  \end{forest}
- \hskip 0.75cm $\leadsto$ \hskip -1.25cm
+ \hskip 0.25cm $\leadsto$ 
 \begin{forest}nice empty nodes, for tree={l sep=0.5em,l=0,calign angle=63}
 [F$_{3}$P,s sep=45pt [F$_{2}$P, s sep=15pt, name=tgt [F$_{2}$][F$_{1}$P [F$_{1}$]]
 ]{\draw (.east) node[right]{$\Rightarrow$ \textit{ROOT}}; }
@@ -757,19 +757,19 @@ Assuming the case \isi{fseq} in \ref{case-fseq}, Caha argues that the case conve
 \ex. \label{case-peeling}Case \isi{peeling} (\citealt[142--145]{Caha2009})
 
 \vskip -0.5cm
-\hskip -1cm \resizebox{\textwidth}{!}{\begin{forest}nice empty nodes, for tree={l sep=0.7em,l=0,calign angle=62}
+\hskip -1cm \resizebox{\textwidth}{!}{\small{\begin{forest}nice empty nodes, for tree={l sep=0.6em,l=0,calign angle=63}
 [~,s sep=15pt [NomP,name=N2 [K$_{1}$][NP [\textit{traw-}\\`grass' ,roof]]]
 [, s sep=0pt [...]
 [, s sep=10pt [AccP,name=A2 [K$_{2}$][\sout{NomP},name=N1]]
 [, s sep=0pt [...]
 [, s sep=10pt [GenP,name=G2 [K$_{3}$][\sout{AccP},name=A1]]
 [, s sep=10pt [...][InstP [K$_{6}$][DatP [K$_{5}$][LocP [K$_{4}$][\sout{GenP},name=G1]]]]]]]]]]
-\draw[dashed,->,>=stealth] (G1) [in=-160,out=-130,looseness=1.4]  to (G2);
-\draw[dashed,->,>=stealth] (A1) [in=-160,out=-130,looseness=1.75]  to (A2);
-\draw[dashed,->,>=stealth] (N1) [in=-160,out=-130,looseness=1.75]  to (N2);
-\end{forest}}
+\draw[dashed,->,>=stealth] (G1) [in=-160,out=-130,looseness=1.1]  to (G2);
+\draw[dashed,->,>=stealth] (A1) [in=-160,out=-130,looseness=1.5]  to (A2);
+\draw[dashed,->,>=stealth] (N1) [in=-160,out=-135,looseness=1.5]  to (N2);
+\end{forest}}}
 
-\vskip -1cm
+\vskip -1.25cm
 
 \noindent An argument for case \isi{peeling} is based on the fact that the case conversions in both the passive transformation and the \ili{Polish} `spray/load' alternation involve a change that is constrained by the case \isi{fseq} in \ref{case-fseq}: a bigger (containing) case converts into a smaller (contained) one, not vice versa. \citet[143--146]{Caha2009} offers a detailed discussion of the role of case selectors in case \isi{peeling}.\is{containment} In essence, the triggering mechanism for case peeling is the presence of selecting heads in the clause, which attract a matching case phrase -- much in the spirit of the probe-goal system of \cite{Chomsky2000}, where the probe attracts a matching goal in its c-commanding domain. For instance, an accusative case selector such as a transitive V head will attract the AccP-layer from its c-commanding domain; a nominative case selector such as the T head will attract the NomP-layer from its c-commanding domain, and so on. The result is that in a single derivation, case-marked NPs will pass through multiple case positions.  As acknowledged in \citet[146]{Caha2009}, such a view stands in opposition to most other theories of case derivation, including \cite{Chomsky2000}. 
 \par
